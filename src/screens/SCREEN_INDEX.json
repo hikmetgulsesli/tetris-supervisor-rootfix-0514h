@@ -1,0 +1,237 @@
+[
+  {
+    "screenId": "85438825342648a5b2852ab0b7ea0cca",
+    "title": "Main Menu",
+    "componentName": "MainMenu",
+    "file": "src/screens/MainMenu.tsx",
+    "buttons": 4,
+    "inputs": 0,
+    "links": 0,
+    "actions": [
+      {
+        "id": "start-game-1",
+        "kind": "button",
+        "label": "START GAME",
+        "index": 0
+      },
+      {
+        "id": "challenge-mode-2",
+        "kind": "button",
+        "label": "CHALLENGE MODE",
+        "index": 1
+      },
+      {
+        "id": "controls-3",
+        "kind": "button",
+        "label": "CONTROLS",
+        "index": 2
+      },
+      {
+        "id": "settings-4",
+        "kind": "button",
+        "label": "SETTINGS",
+        "index": 3
+      }
+    ]
+  },
+  {
+    "screenId": "a6256ca0245b46f9bc9b940cc525e729",
+    "title": "Pause Overlay",
+    "componentName": "PauseOverlay",
+    "file": "src/screens/PauseOverlay.tsx",
+    "buttons": 8,
+    "inputs": 0,
+    "links": 0,
+    "actions": [
+      {
+        "id": "button-1-1",
+        "kind": "button",
+        "label": "Button 1",
+        "index": 0
+      },
+      {
+        "id": "button-2-2",
+        "kind": "button",
+        "label": "Button 2",
+        "index": 1
+      },
+      {
+        "id": "command-3",
+        "kind": "button",
+        "label": "COMMAND",
+        "index": 2
+      },
+      {
+        "id": "database-4",
+        "kind": "button",
+        "label": "DATABASE",
+        "index": 3
+      },
+      {
+        "id": "system-5",
+        "kind": "button",
+        "label": "SYSTEM",
+        "index": 4
+      },
+      {
+        "id": "resume-6",
+        "kind": "button",
+        "label": "RESUME",
+        "index": 5
+      },
+      {
+        "id": "restart-7",
+        "kind": "button",
+        "label": "RESTART",
+        "index": 6
+      },
+      {
+        "id": "quit-to-menu-8",
+        "kind": "button",
+        "label": "QUIT TO MENU",
+        "index": 7
+      }
+    ]
+  },
+  {
+    "screenId": "86a889247c124a6082753cb673b66b9c",
+    "title": "Game Board",
+    "componentName": "GameBoard",
+    "file": "src/screens/GameBoard.tsx",
+    "buttons": 12,
+    "inputs": 0,
+    "links": 0,
+    "actions": [
+      {
+        "id": "button-1-1",
+        "kind": "button",
+        "label": "Button 1",
+        "index": 0
+      },
+      {
+        "id": "button-2-2",
+        "kind": "button",
+        "label": "Button 2",
+        "index": 1
+      },
+      {
+        "id": "reboot-sequence-3",
+        "kind": "button",
+        "label": "REBOOT SEQUENCE",
+        "index": 2
+      },
+      {
+        "id": "button-4-4",
+        "kind": "button",
+        "label": "Button 4",
+        "index": 3
+      },
+      {
+        "id": "button-5-5",
+        "kind": "button",
+        "label": "Button 5",
+        "index": 4
+      },
+      {
+        "id": "button-6-6",
+        "kind": "button",
+        "label": "Button 6",
+        "index": 5
+      },
+      {
+        "id": "button-7-7",
+        "kind": "button",
+        "label": "Button 7",
+        "index": 6
+      },
+      {
+        "id": "button-8-8",
+        "kind": "button",
+        "label": "Button 8",
+        "index": 7
+      },
+      {
+        "id": "button-9-9",
+        "kind": "button",
+        "label": "Button 9",
+        "index": 8
+      },
+      {
+        "id": "command-10",
+        "kind": "button",
+        "label": "COMMAND",
+        "index": 9
+      },
+      {
+        "id": "database-11",
+        "kind": "button",
+        "label": "DATABASE",
+        "index": 10
+      },
+      {
+        "id": "system-12",
+        "kind": "button",
+        "label": "SYSTEM",
+        "index": 11
+      }
+    ]
+  },
+  {
+    "screenId": "048c9b7a31c54a49a9e2100341b078fd",
+    "title": "Game Over",
+    "componentName": "GameOver",
+    "file": "src/screens/GameOver.tsx",
+    "buttons": 5,
+    "inputs": 0,
+    "links": 0,
+    "actions": [
+      {
+        "id": "button-1-1",
+        "kind": "button",
+        "label": "Button 1",
+        "index": 0
+      },
+      {
+        "id": "button-2-2",
+        "kind": "button",
+        "label": "Button 2",
+        "index": 1
+      },
+      {
+        "id": "play-again-3",
+        "kind": "button",
+        "label": "PLAY AGAIN",
+        "index": 2
+      },
+      {
+        "id": "leaderboard-4",
+        "kind": "button",
+        "label": "LEADERBOARD",
+        "index": 3
+      },
+      {
+        "id": "exit-menu-5",
+        "kind": "button",
+        "label": "EXIT MENU",
+        "index": 4
+      }
+    ]
+  },
+  {
+    "screenId": "dbf4b7fd98b64dccb8c73402aab57e9e",
+    "title": "Controls Help",
+    "componentName": "ControlsHelp",
+    "file": "src/screens/ControlsHelp.tsx",
+    "buttons": 1,
+    "inputs": 0,
+    "links": 0,
+    "actions": [
+      {
+        "id": "acknowledge-and-close-1",
+        "kind": "button",
+        "label": "Acknowledge and Close",
+        "index": 0
+      }
+    ]
+  }
+]

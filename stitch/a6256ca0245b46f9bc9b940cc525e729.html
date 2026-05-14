@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tetris Supervisor - Pause</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap');
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-primary": "#003640",
+                  "secondary": "#b9c7e0",
+                  "on-primary-fixed": "#001f26",
+                  "on-background": "#dee3e6",
+                  "inverse-on-surface": "#2b3133",
+                  "surface-container-highest": "#303638",
+                  "on-primary-fixed-variant": "#004e5c",
+                  "surface-dim": "#0e1416",
+                  "outline": "#869397",
+                  "primary-container": "#06b6d4",
+                  "surface": "#0e1416",
+                  "surface-bright": "#343a3c",
+                  "outline-variant": "#3d494c",
+                  "secondary-container": "#3c4a5e",
+                  "on-secondary-container": "#abb9d2",
+                  "on-secondary-fixed": "#0d1c2f",
+                  "inverse-surface": "#dee3e6",
+                  "surface-container-high": "#252b2d",
+                  "tertiary-fixed-dim": "#ffb873",
+                  "surface-container-low": "#171d1e",
+                  "on-tertiary": "#4b2800",
+                  "on-surface-variant": "#bcc9cd",
+                  "inverse-primary": "#00687a",
+                  "tertiary-container": "#e89337",
+                  "tertiary-fixed": "#ffdcbf",
+                  "background": "#0e1416",
+                  "on-tertiary-fixed": "#2d1600",
+                  "surface-tint": "#4cd7f6",
+                  "tertiary": "#ffb873",
+                  "primary-fixed-dim": "#4cd7f6",
+                  "on-surface": "#dee3e6",
+                  "primary": "#4cd7f6",
+                  "on-primary-container": "#00424f",
+                  "on-error-container": "#ffdad6",
+                  "on-tertiary-fixed-variant": "#6a3b00",
+                  "surface-variant": "#303638",
+                  "surface-container": "#1b2122",
+                  "error-container": "#93000a",
+                  "on-error": "#690005",
+                  "primary-fixed": "#acedff",
+                  "on-secondary-fixed-variant": "#3a485c",
+                  "on-tertiary-container": "#5b3200",
+                  "on-secondary": "#233144",
+                  "error": "#ffb4ab",
+                  "secondary-fixed": "#d5e3fd",
+                  "secondary-fixed-dim": "#b9c7e0",
+                  "surface-container-lowest": "#090f11"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "target-min": "44px",
+                  "unit": "4px",
+                  "gutter": "16px",
+                  "grid-gap": "1px",
+                  "panel-padding": "24px"
+          },
+          "fontFamily": {
+                  "body-md": ["Geist"],
+                  "terminal-sm": ["Geist"],
+                  "headline-lg": ["Geist"],
+                  "display-score": ["Geist"],
+                  "headline-md": ["Geist"],
+                  "body-lg": ["Geist"],
+                  "label-caps": ["Geist"]
+          },
+          "fontSize": {
+                  "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                  "terminal-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                  "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                  "display-score": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                  "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                  "body-lg": ["18px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                  "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter h-target-min bg-surface border-b border-outline-variant">
+<div class="text-headline-md font-headline-md font-bold tracking-tighter text-primary uppercase">
+      TETRIS SUPERVISOR
+    </div>
+<div class="flex items-center gap-2 hidden md:flex">
+<button class="text-on-surface-variant hover:bg-surface-container-highest transition-colors active:scale-95 duration-100 w-target-min h-target-min flex items-center justify-center rounded">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-container-highest transition-colors active:scale-95 duration-100 w-target-min h-target-min flex items-center justify-center rounded">
+<span class="material-symbols-outlined">terminal</span>
+</button>
+</div>
+</header>
+<!-- Main Game Canvas (Background Layer) -->
+<main class="pt-[60px] pb-[80px] min-h-screen flex flex-col md:flex-row items-center justify-center gap-gutter px-gutter">
+<!-- Left Stats Panel -->
+<aside class="flex flex-row md:flex-col gap-gutter w-full md:w-auto justify-center md:justify-start order-2 md:order-1">
+<!-- Hold Queue -->
+<div class="bg-surface-container border border-outline-variant p-gutter w-[120px] h-[120px] flex flex-col relative">
+<div class="font-label-caps text-label-caps text-on-surface-variant absolute top-unit left-unit">HOLD</div>
+</div>
+<!-- Score Display -->
+<div class="bg-surface-container border border-outline-variant p-gutter w-[120px] flex flex-col relative mt-auto md:mt-0">
+<div class="font-label-caps text-label-caps text-on-surface-variant mb-2">SCORE</div>
+<div class="font-display-score text-display-score text-primary">024K</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant mt-4 mb-2">LEVEL</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">12</div>
+</div>
+</aside>
+<!-- Game Grid (10x20) -->
+<div class="order-1 md:order-2 bg-surface border border-outline-variant w-[260px] h-[520px] relative overflow-hidden flex items-center justify-center">
+<!-- Simulated grid pattern using repeating gradients to save DOM nodes -->
+<div class="absolute inset-0 bg-[linear-gradient(to_right,var(--tw-colors-outline-variant)_1px,transparent_1px),linear-gradient(to_bottom,var(--tw-colors-outline-variant)_1px,transparent_1px)] bg-[size:26px_26px] opacity-20"></div>
+<!-- Faint pieces representation -->
+<div class="absolute bottom-0 left-[26px] w-[78px] h-[26px] bg-secondary-container/30 border border-secondary/20"></div>
+<div class="absolute bottom-[26px] left-[52px] w-[52px] h-[52px] bg-tertiary-container/30 border border-tertiary/20"></div>
+<div class="absolute bottom-0 right-[26px] w-[104px] h-[52px] bg-primary-container/30 border border-primary/20"></div>
+</div>
+<!-- Right Stats Panel -->
+<aside class="flex flex-row md:flex-col gap-gutter w-full md:w-auto justify-center md:justify-start order-3">
+<!-- Next Queue -->
+<div class="bg-surface-container border border-outline-variant p-gutter w-[120px] h-[300px] flex flex-col relative">
+<div class="font-label-caps text-label-caps text-on-surface-variant absolute top-unit left-unit">NEXT</div>
+<!-- Mock next pieces -->
+<div class="mt-8 mx-auto w-[52px] h-[52px] bg-surface-bright/50 border border-outline-variant/50"></div>
+<div class="mt-8 mx-auto w-[78px] h-[26px] bg-surface-bright/50 border border-outline-variant/50"></div>
+<div class="mt-8 mx-auto w-[52px] h-[78px] bg-surface-bright/50 border border-outline-variant/50"></div>
+</div>
+</aside>
+</main>
+<!-- Bottom Navigation Shell (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 pb-safe bg-surface-container border-t border-outline-variant">
+<button class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-none px-4 py-1 border-b-2 border-primary w-full h-full hover:bg-surface-bright transition-all active:opacity-80 duration-75">
+<span class="material-symbols-outlined text-[24px]">videogame_asset</span>
+<span class="font-label-caps text-label-caps mt-1">COMMAND</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 w-full h-full hover:bg-surface-bright transition-all active:opacity-80 duration-75">
+<span class="material-symbols-outlined text-[24px]">analytics</span>
+<span class="font-label-caps text-label-caps mt-1">DATABASE</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 w-full h-full hover:bg-surface-bright transition-all active:opacity-80 duration-75">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+<span class="font-label-caps text-label-caps mt-1">SYSTEM</span>
+</button>
+</nav>
+<!-- ========================================== -->
+<!-- PAUSE OVERLAY (Primary Focus of this Task) -->
+<!-- ========================================== -->
+<div class="fixed inset-0 z-[100] bg-background/70 backdrop-blur-md flex items-center justify-center p-gutter">
+<div class="bg-surface-container border border-outline-variant w-full max-w-[360px] flex flex-col shadow-2xl">
+<!-- Modal Header -->
+<div class="px-panel-padding py-6 border-b border-outline-variant flex justify-center items-center relative">
+<div class="absolute left-6 top-6 w-2 h-2 rounded-full bg-error animate-pulse"></div>
+<h2 class="font-headline-md text-headline-md text-primary uppercase tracking-widest">GAME PAUSED</h2>
+</div>
+<!-- Modal Body (Actions) -->
+<div class="p-panel-padding flex flex-col gap-4">
+<button class="group relative w-full flex items-center justify-center bg-surface border border-primary h-target-min hover:bg-primary transition-colors active:scale-[0.98]">
+<span class="font-label-caps text-label-caps text-primary group-hover:text-on-primary uppercase transition-colors">RESUME</span>
+</button>
+<button class="group relative w-full flex items-center justify-center bg-surface border border-outline h-target-min hover:border-primary hover:bg-surface-bright transition-colors active:scale-[0.98]">
+<span class="font-label-caps text-label-caps text-on-surface group-hover:text-primary uppercase transition-colors">RESTART</span>
+</button>
+<button class="group relative w-full flex items-center justify-center bg-surface border border-error h-target-min hover:bg-error transition-colors active:scale-[0.98]">
+<span class="font-label-caps text-label-caps text-error group-hover:text-on-error uppercase transition-colors">QUIT TO MENU</span>
+</button>
+</div>
+<!-- Supervisor Feed (Ambient Tech Flavour) -->
+<div class="px-panel-padding pb-6 flex items-center gap-2 opacity-50">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">terminal</span>
+<div class="font-terminal-sm text-terminal-sm text-on-surface-variant overflow-hidden whitespace-nowrap text-ellipsis">
+          Supervisor thread interrupted. Waiting for command input...
+        </div>
+</div>
+</div>
+</div>
+</body></html>
